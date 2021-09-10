@@ -1,40 +1,35 @@
 // importing module
 
-// import { addToCart, totalPrice, totalQuantity } from './shoppingCart.js';
+import func from './shoppingCart.js';
 
-// addToCart('bread', 5);
-
-// import * as shoppingCart from './shoppingCart.js';
-
-import add from './shoppingCart.js';
-
-// shoppingCart.addToCart('bread', 5);
-//
+console.log(func());
 
 console.log('Importing Module');
 
-const shoppingCart2 = (function () {
-  const cart = [];
-  const shippingCost = 10;
-  const totalPrice = 237;
-  const totalQuantity = 23;
+// import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 
-  const addToCart = function (product, quantity) {
-    cart.push({ product, quantity });
-    console.log(`${quantity} ${product} added to cart`);
-  };
+// const shoppingCart2 = (function () {
+//   const cart = [];
+//   const shippingCost = 10;
+//   const totalPrice = 237;
+//   const totalQuantity = 23;
 
-  const orderStock = function (product, quantity) {
-    console.log(`${quantity} ${product} ordered from supplier`);
-  };
+//   const addToCart = function (product, quantity) {
+//     cart.push({ product, quantity });
+//     console.log(`${quantity} ${product} added to cart`);
+//   };
 
-  return {
-    addToCart,
-    cart,
-    totalPrice,
-    totalQuantity,
-  };
-})();
+//   const orderStock = function (product, quantity) {
+//     console.log(`${quantity} ${product} ordered from supplier`);
+//   };
 
-shoppingCart2.addToCart('apple', 4);
-shoppingCart2.addToCart('pizza', 2);
+//   return {
+//     addToCart,
+//     cart,
+//     totalPrice,
+//     totalQuantity,
+//   };
+// })();
+
+// shoppingCart2.addToCart('apple', 4);
+// shoppingCart2.addToCart('pizza', 2);
