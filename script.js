@@ -8,28 +8,22 @@ console.log('Importing Module');
 
 // import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
 
-// const shoppingCart2 = (function () {
-//   const cart = [];
-//   const shippingCost = 10;
-//   const totalPrice = 237;
-//   const totalQuantity = 23;
+if (module.hot) {
+  module.hot.accept();
+}
 
-//   const addToCart = function (product, quantity) {
-//     cart.push({ product, quantity });
-//     console.log(`${quantity} ${product} added to cart`);
-//   };
+class Person {
+  greeting = 'Hey';
+  constructor(name) {
+    this.name = name;
+    console.log(`${this.greeting}, ${this.name}`);
+  }
+}
 
-//   const orderStock = function (product, quantity) {
-//     console.log(`${quantity} ${product} ordered from supplier`);
-//   };
+const jonas = new Person('Jonas');
 
-//   return {
-//     addToCart,
-//     cart,
-//     totalPrice,
-//     totalQuantity,
-//   };
-// })();
+console.log('Jonas' ?? null);
 
-// shoppingCart2.addToCart('apple', 4);
-// shoppingCart2.addToCart('pizza', 2);
+// console.log(cart.find(el => el.quantity >= 2));
+
+import 'core-js/stable';
